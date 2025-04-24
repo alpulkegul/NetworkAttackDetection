@@ -25,7 +25,7 @@ IPS | Intrusion Prevention System | İzinsiz Giriş Önleme Sistemi
 - `suricata -q 0`: Suricata'yı bir IPS gibi çalıştırmak için kullanılır. `-q` parametresi ile hangi NFQUEUE kuyruğunu dinleyeceğini belirtirsin. Bu modda suricata gelen paketleri analiz eder ve şüpheli olanları **aktif olarak** engeller. Yani gerçek zamanlı müdahale de bulunur.
 
 - Gecikme burada, **ağ paketlerinin analiz edilip işlenmesi sırasında oluşan zaman farkını** ifade ediyor. 
-    - IDS (Snort): Paketi alır, kopyasını inceler ama aktarıma müdahale etmez. Bu yüzden gecikme çok düşüktür.
+    - IDS (Snort): Paketi alır, kopyasını inceler ama aktarıma müdahale etmez. Bu yüzden **gecikme çok düşüktür**.
     - IPS (Suricata): Paketi analiz eder. Analiz ettikten sonra karar verir: paket geçsin mi, engellensin mi ? Bu analiz süresi bir kaç milisaniyelikte olsa gecikme yaratır. Kritik ağlarda bu bile fark edilebilir.
 
 - False Positive: Kısaca aslında tehdit olmayan bir şeyi tehdit olarak algılamaktır. **Mesela normal bir port taramasını saldırı olarak algılayıp alarm vermesi**. Bu durum IDS'lerde daha sık olur çünkü **saldırı benzeri davranışlar, saldırılardan daha yüksek bir olasılık getirir.** Bu nedenle de IDS yanlış pozitif olarak değerlendirilir.

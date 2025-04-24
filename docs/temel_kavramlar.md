@@ -1,3 +1,7 @@
+---
+Oluşturma Tarihi: 2025-04-23T21:16
+Güncelleme Tarihi: 2025-04-24T14:30
+---
 # IDS/IPS Temel Kavramlar
 
 ## IDS ve IPS nedir?
@@ -13,13 +17,13 @@ IPS | Intrusion Prevention System | İzinsiz Giriş Önleme Sistemi
 - **Polis**
  
 ## IDS vs. IPS
-| Özellik      | IDS                    | IPS                     |
-| ------------ | ---------------------- | ----------------------- |
-| **Tepki verme**    | Pasif (Loglama/Uyarı)  | Aktif (Engelleme)       |
-| **Kullanım** | *`snort -l`             | *`suricata -q`           |
-| **Örnek**    | Port taramasını tespit | Brute force'u engelleme |
-| **Gecikme**  | Düşük              | Yüksek (Analiz süresi) |
-| **Risk**     | False Positive     | False Negative     |
+| Özellik         | IDS                    | IPS                     |
+| --------------- | ---------------------- | ----------------------- |
+| **Tepki verme** | Pasif (Loglama/Uyarı)  | Aktif (Engelleme)       |
+| **Kullanım**    | *`snort -l`            | *`suricata -q`          |
+| **Örnek**       | Port taramasını tespit | Brute force'u engelleme |
+| **Gecikme**     | Düşük                  | Yüksek (Analiz süresi)  |
+| **Risk**        | False Positive         | False Negative          |
 
 - `snort -l /log/dizin`: Komut, snort'un **loglama modunda** yani IDS gibi çalıştırıldığını ifade eder. -l komutu ile logların nereye kaydedileceği belirtilir. 
 - `suricata -q 0`: Suricata'yı bir IPS gibi çalıştırmak için kullanılır. `-q` parametresi ile hangi NFQUEUE kuyruğunu dinleyeceğini belirtirsin. Bu modda suricata gelen paketleri analiz eder ve şüpheli olanları **aktif olarak** engeller. Yani gerçek zamanlı müdahale de bulunur.
@@ -53,12 +57,6 @@ Snort temelde 4 modülden oluşur. Bunlar kod çözücü, ön işlemci, tespit m
 
 * libpcap, ağ arayüzü üzerinden geçen trafiği yakalamak ve işlemek için kullanılan bir düşük seviye C kütüphanesidir. Ağdaki ham paketleri yakalar. Snort, Wireshark gibi uygulamalar ise bu verileri analiz eder.
 
-# Suricata 
-
-
-
-
-
 NOT:
 
 Aslında Snort'ta, Suricata'da hem IDS hem IPS olarak çalışabilir. Fakat ilk niyet ve varsayılan kullanım şekli Snort -> IDS, Suricata -> IPS olarak bir **etiketlenmeye** yol açtı. Bunu iki neden de inceleyecek olursak;
@@ -66,5 +64,13 @@ Aslında Snort'ta, Suricata'da hem IDS hem IPS olarak çalışabilir. Fakat ilk 
 - Suricata IPS destekli olarak tasarlandı ve IPS olarak Snort'tan daha performanslı çalışmakta. 
 
 Yani kısacası, topluluk alışkanlıkları ve yaygın kullanım şekillerinden dolayı snort IDS, suricata IPS olarak kullanılıyor. Fakat her ikiside hem IDS, hem IPS olarak çalışabiliyor.
+
+# Suricata 
+
+![[Suricata Ağ Mimarisi.canvas]]
+
+
+
+
 
 

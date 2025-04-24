@@ -1,25 +1,27 @@
 {
   "main": {
-    "id": "5fd1aceadc5ea31f",
+    "id": "5324373015726ba8",
     "type": "split",
     "children": [
       {
-        "id": "ac6fc0c3beecfd3d",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "669d78af8986d5cd",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "docs/temel_kavramlar.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
+                "file": "Suricata Ağ Mimarisi.canvas",
+                "viewState": {
+                  "x": 859.6596465463319,
+                  "y": -609.1002920214252,
+                  "zoom": -0.6000000000000001
+                }
               },
-              "icon": "lucide-file",
-              "title": "temel_kavramlar"
+              "icon": "lucide-layout-dashboard",
+              "title": "Suricata Ağ Mimarisi"
             }
           }
         ]
@@ -179,7 +181,7 @@
               "type": "review-queue-list-view",
               "state": {},
               "icon": "SpacedRepIcon",
-              "title": "Not İnceleme Sırası"
+              "title": "Notes Review Queue"
             }
           }
         ],
@@ -192,6 +194,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-spaced-repetition:Review flashcards": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -210,18 +213,18 @@
       "obsidian-projects:Open projects": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "dbfolder:Create a new database table": false,
-      "flashcards-obsidian:Generate flashcards": false,
-      "obsidian-spaced-repetition:Flash kartları gözden geçir": false
+      "flashcards-obsidian:Generate flashcards": false
     }
   },
-  "active": "669d78af8986d5cd",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "README.md",
     "Suricata Ağ Mimarisi.canvas",
     "docs/temel_kavramlar.md",
+    "images/network.png",
+    "images/firewallKonumlandırma.png",
+    "images",
+    "README.md",
     "docs/kurulum.md",
-    "Pasted image 20250423233709.png",
-    "Pasted image 20250423231025.png",
     "docs/testler.md"
   ]
 }

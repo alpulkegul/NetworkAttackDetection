@@ -7929,7 +7929,7 @@
     {
       "path": "docs/temel_kavramlar.md",
       "uniqueDaysOpened": 1,
-      "totalTimesOpened": 4,
+      "totalTimesOpened": 7,
       "openLogs": [
         {
           "timestampMillis": 1745494203603
@@ -7942,19 +7942,190 @@
         },
         {
           "timestampMillis": 1745494286260
+        },
+        {
+          "timestampMillis": 1745505595864
+        },
+        {
+          "timestampMillis": 1745505597503
+        },
+        {
+          "timestampMillis": 1745505720608
         }
       ]
     },
     {
       "path": "Suricata Ağ Mimarisi.canvas",
       "uniqueDaysOpened": 1,
-      "totalTimesOpened": 2,
+      "totalTimesOpened": 56,
       "openLogs": [
         {
           "timestampMillis": 1745494250352
         },
         {
           "timestampMillis": 1745494253530
+        },
+        {
+          "timestampMillis": 1745505714794
+        },
+        {
+          "timestampMillis": 1745505967199
+        },
+        {
+          "timestampMillis": 1745505969997
+        },
+        {
+          "timestampMillis": 1745505998213
+        },
+        {
+          "timestampMillis": 1745506014480
+        },
+        {
+          "timestampMillis": 1745506016843
+        },
+        {
+          "timestampMillis": 1745506043235
+        },
+        {
+          "timestampMillis": 1745506052006
+        },
+        {
+          "timestampMillis": 1745506053578
+        },
+        {
+          "timestampMillis": 1745506124793
+        },
+        {
+          "timestampMillis": 1745506155659
+        },
+        {
+          "timestampMillis": 1745506160318
+        },
+        {
+          "timestampMillis": 1745506174047
+        },
+        {
+          "timestampMillis": 1745506182129
+        },
+        {
+          "timestampMillis": 1745506182600
+        },
+        {
+          "timestampMillis": 1745506190674
+        },
+        {
+          "timestampMillis": 1745506193711
+        },
+        {
+          "timestampMillis": 1745506198982
+        },
+        {
+          "timestampMillis": 1745506204356
+        },
+        {
+          "timestampMillis": 1745506208378
+        },
+        {
+          "timestampMillis": 1745506210880
+        },
+        {
+          "timestampMillis": 1745506211538
+        },
+        {
+          "timestampMillis": 1745506218035
+        },
+        {
+          "timestampMillis": 1745506230889
+        },
+        {
+          "timestampMillis": 1745506243088
+        },
+        {
+          "timestampMillis": 1745506250699
+        },
+        {
+          "timestampMillis": 1745506253499
+        },
+        {
+          "timestampMillis": 1745506256392
+        },
+        {
+          "timestampMillis": 1745506264757
+        },
+        {
+          "timestampMillis": 1745506281824
+        },
+        {
+          "timestampMillis": 1745506286129
+        },
+        {
+          "timestampMillis": 1745506355474
+        },
+        {
+          "timestampMillis": 1745506376278
+        },
+        {
+          "timestampMillis": 1745506423313
+        },
+        {
+          "timestampMillis": 1745506436815
+        },
+        {
+          "timestampMillis": 1745506440274
+        },
+        {
+          "timestampMillis": 1745506447857
+        },
+        {
+          "timestampMillis": 1745506449601
+        },
+        {
+          "timestampMillis": 1745506453070
+        },
+        {
+          "timestampMillis": 1745506459164
+        },
+        {
+          "timestampMillis": 1745506482997
+        },
+        {
+          "timestampMillis": 1745506488316
+        },
+        {
+          "timestampMillis": 1745506531910
+        },
+        {
+          "timestampMillis": 1745506556032
+        },
+        {
+          "timestampMillis": 1745506561988
+        },
+        {
+          "timestampMillis": 1745506573258
+        },
+        {
+          "timestampMillis": 1745506576968
+        },
+        {
+          "timestampMillis": 1745506577347
+        },
+        {
+          "timestampMillis": 1745506578141
+        },
+        {
+          "timestampMillis": 1745506579329
+        },
+        {
+          "timestampMillis": 1745506681976
+        },
+        {
+          "timestampMillis": 1745506720828
+        },
+        {
+          "timestampMillis": 1745506734662
+        },
+        {
+          "timestampMillis": 1745506735949
         }
       ]
     },
@@ -7965,6 +8136,77 @@
       "openLogs": [
         {
           "timestampMillis": 1745494282964
+        }
+      ]
+    },
+    {
+      "path": "images/network.png",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 12,
+      "openLogs": [
+        {
+          "timestampMillis": 1745505618471
+        },
+        {
+          "timestampMillis": 1745505628983
+        },
+        {
+          "timestampMillis": 1745505632109
+        },
+        {
+          "timestampMillis": 1745505713413
+        },
+        {
+          "timestampMillis": 1745506173155
+        },
+        {
+          "timestampMillis": 1745506181073
+        },
+        {
+          "timestampMillis": 1745506186914
+        },
+        {
+          "timestampMillis": 1745506196739
+        },
+        {
+          "timestampMillis": 1745506199835
+        },
+        {
+          "timestampMillis": 1745506205536
+        },
+        {
+          "timestampMillis": 1745506209056
+        },
+        {
+          "timestampMillis": 1745506375834
+        }
+      ]
+    },
+    {
+      "path": "images/firewallKonumlandırma.png",
+      "uniqueDaysOpened": 1,
+      "totalTimesOpened": 7,
+      "openLogs": [
+        {
+          "timestampMillis": 1745505619176
+        },
+        {
+          "timestampMillis": 1745505635781
+        },
+        {
+          "timestampMillis": 1745505688635
+        },
+        {
+          "timestampMillis": 1745505969325
+        },
+        {
+          "timestampMillis": 1745506048283
+        },
+        {
+          "timestampMillis": 1745506053008
+        },
+        {
+          "timestampMillis": 1745506055022
         }
       ]
     }

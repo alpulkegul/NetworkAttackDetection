@@ -11,17 +11,10 @@
             "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Suricata Ağ Mimarisi.canvas",
-                "viewState": {
-                  "x": 859.6596465463319,
-                  "y": -609.1002920214252,
-                  "zoom": -0.6000000000000001
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "Suricata Ağ Mimarisi"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -81,7 +74,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e65fc03449aaa7c0",
@@ -216,15 +210,17 @@
       "flashcards-obsidian:Generate flashcards": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "31f0a169522d887c",
   "lastOpenFiles": [
-    "Suricata Ağ Mimarisi.canvas",
-    "docs/temel_kavramlar.md",
+    "docs/Temel_Bilgilendirmeler.md",
+    "docs/Suricata Ağ Mimarisi.canvas",
+    "docs/Temel_Kavramlar.md",
+    "docs/kurulum.md",
+    "docs/Konfigürasyon Yapıları.md",
     "images/network.png",
     "images/firewallKonumlandırma.png",
     "images",
     "README.md",
-    "docs/kurulum.md",
     "docs/testler.md"
   ]
 }

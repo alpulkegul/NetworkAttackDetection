@@ -1,32 +1,33 @@
 ---
 Oluşturma Tarihi: 2025-04-23T21:16
-Güncelleme Tarihi: 2025-04-24T14:30
+Güncelleme Tarihi: 2025-04-25T09:11
 ---
-# IDS/IPS Temel Kavramlar
+
 
 ## IDS ve IPS nedir?
 
-IDS | Instrusion Detection System | İzinsiz Giriş **Tespit** Sistemi
+I**D**S | Instrusion Detection System | İzinsiz Giriş **Tespit** Sistemi
 - Pasif izleme yapar, saldırıları **loglar** ve uyarı verir.
-- Olayları kaydeden bir güvenlik kamerası olarak düşünüşebilir. İzler, kaydeder fakat müdahale etmez.
+- Olayları kaydeden bir güvenlik kamerası olarak düşünülebilir. İzler, kaydeder fakat **müdahale etmez**.
 - **Dedektif**
 
-IPS | Intrusion Prevention System | İzinsiz Giriş Önleme Sistemi
+I**P**S | Intrusion Prevention System | İzinsiz Giriş **Önleme** Sistemi
 - **Aktif** müdahale eder. Saldırıları **engeller**.
 - Kapıdaki güvenlik görevlisi gibi düşünülebilir. Şüpheliyi içeri almaz.
 - **Polis**
  
 ## IDS vs. IPS
-| Özellik         | IDS                    | IPS                     |
-| --------------- | ---------------------- | ----------------------- |
-| **Tepki verme** | Pasif (Loglama/Uyarı)  | Aktif (Engelleme)       |
-| **Kullanım**    | *`snort -l`            | *`suricata -q`          |
-| **Örnek**       | Port taramasını tespit | Brute force'u engelleme |
-| **Gecikme**     | Düşük                  | Yüksek (Analiz süresi)  |
-| **Risk**        | False Positive         | False Negative          |
 
-- `snort -l /log/dizin`: Komut, snort'un **loglama modunda** yani IDS gibi çalıştırıldığını ifade eder. -l komutu ile logların nereye kaydedileceği belirtilir. 
-- `suricata -q 0`: Suricata'yı bir IPS gibi çalıştırmak için kullanılır. `-q` parametresi ile hangi NFQUEUE kuyruğunu dinleyeceğini belirtirsin. Bu modda suricata gelen paketleri analiz eder ve şüpheli olanları **aktif olarak** engeller. Yani gerçek zamanlı müdahale de bulunur.
+| Özellik         | IDS                    | IPS                      |
+| --------------- | ---------------------- | ------------------------ |
+| **Tepki verme** | Pasif (Loglama/Uyarı)  | Aktif (Engelleme)        |
+| **Kullanım**    | * `snort -l`           | * `suricata -q`          |
+| **Örnek**       | Port taramasını tespit | Brute force'u engelleme  |
+| **Gecikme**     | * Düşük                | * Yüksek (Analiz süresi) |
+| **Risk**        | * False Positive       | * False Negative         |
+
+- `snort -l /log/dizin`: Komut, snort'un **loglama modunda** yani IDS gibi çalıştırıldığını ifade eder. -l komutu ile logların nereye kaydedileceğini belirtebiliyoruz. 
+- `suricata -q 0`: Suricata'yı bir IPS gibi çalıştırmak için kullanılır. `-q` parametresi ile hangi NFQUEUE kuyruğunu dinleyeceğini belirtiyoruz. Bu modda Suricata gelen paketleri analiz eder ve şüpheli olanları **aktif olarak** engeller. Yani gerçek zamanlı müdahale de bulunur.
 
 - Gecikme burada, **ağ paketlerinin analiz edilip işlenmesi sırasında oluşan zaman farkını** ifade ediyor. 
     - IDS (Snort): Paketi alır, kopyasını inceler ama aktarıma müdahale etmez. Bu yüzden **gecikme çok düşüktür**.
@@ -41,16 +42,18 @@ IPS | Intrusion Prevention System | İzinsiz Giriş Önleme Sistemi
 
 ## Modüler Yapı
 
-![Snort-Moduler-Yapı](https://github.com/user-attachments/assets/cf57a4c7-0b98-4931-b8bf-c224a10f4346)
+![Snort-Moduler-Yapı](https://private-user-images.githubusercontent.com/158475086/436662188-cf57a4c7-0b98-4931-b8bf-c224a10f4346.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDU1NDA0MzMsIm5iZiI6MTc0NTU0MDEzMywicGF0aCI6Ii8xNTg0NzUwODYvNDM2NjYyMTg4LWNmNTdhNGM3LTBiOTgtNDkzMS1iOGJmLWMyMjRhMTBmNDM0Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDI1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQyNVQwMDE1MzNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04YjZiY2RkNDVkMGI5MzJiMjkyODk5YTk3NGJiZWM3NTI1Mjg2YTUyM2QzZDBlNTU4ZDk0OWIzMDkyZWUyMTAzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.jBI3-MeHPjmgq8tdES7HghUZevw9pCbDa9sATlAkPG8)
 *Yukarıdaki görsel lastguardsecurity.com internet sitesinden alınmıştır.*
 
 Snort temelde 4 modülden oluşur. Bunlar kod çözücü, ön işlemci, tespit motoru, alarm üretimi. İşlemler aşağıdaki gibi gerçekleşir.
-- Libpcap tarafından yakalanan paketler hem .pcap dosyaları aracılığıyla hem de canlı trafik üzerinden çözümlenir. Kod çözücü, paketleri katmanlarına ayırır. (Ethernet, IP, TCP/UDP gibi..)
+- Libpcap tarafından yakalanan paketler hem .pcap dosyaları aracılığıyla hem de canlı trafik üzerinden çözümlenir. 
+- Kod çözücü, paketleri katmanlarına ayırır. (Ethernet, IP, TCP/UDP gibi..)
 - Ön işlemci, paketleri tespit motorunun anlayabileceği şekle sokar.
 - Tespit motoru, Snort'un beynidir diyebiliriz. Tespit motorunda kural setleri yazılır. Bu kısımda kural setleri ile saldırı tespitleri yapılır.
 - Uyarı oluşturma kısmı ise tespit edilen saldırıların ne tür uyarı oluşturacağını belirler. 
 
-![Snort-Moduler-Yapı2](https://github.com/user-attachments/assets/71bbd172-a08e-4867-8912-4ba956a042be)
+![Snort-Moduler-Yapı2](https://private-user-images.githubusercontent.com/158475086/436668808-71bbd172-a08e-4867-8912-4ba956a042be.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDU1NDA0MzMsIm5iZiI6MTc0NTU0MDEzMywicGF0aCI6Ii8xNTg0NzUwODYvNDM2NjY4ODA4LTcxYmJkMTcyLWEwOGUtNDg2Ny04OTEyLTRiYTk1NmEwNDJiZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDI1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQyNVQwMDE1MzNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01ZDIzYWVkOTU0NjhkZWEzMWU4M2RlZWNlNWZlZTBlMjgzZjg0OGZmNjk5MjBlODNjOTVhNWUxMDA1YjNmZjI1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.eNfyEVaJlbB6FxsHiliJHdSHJfxkpMUNFAwCFXbjSKs)
+
 *DÜMF Mühendislik Dergisi syf. 66*
 
 - Yukarıdaki görselden de gördüğümüz gibi oluşturulan uyarılardan bir uyarı veritabanı oluşturulabilir. Daha sonra uyarılar oluşturulur.
